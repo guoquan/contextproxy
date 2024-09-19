@@ -83,7 +83,7 @@ jobs:
     environment:
       name: pypi
       # OPTIONAL: uncomment and update to include your PyPI project URL in the deployment status:
-      url: https://pypi.org/p/contextproxy
+      url: https://pypi.org/project/contextproxy
 
     steps:
       - name: Retrieve release distributions
@@ -96,3 +96,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           skip-existing: true
+          verbose: true
