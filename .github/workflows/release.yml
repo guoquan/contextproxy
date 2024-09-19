@@ -47,7 +47,7 @@ jobs:
       - build
 
     permissions:
-      # IMPORTANT: this permission is mandatory for trusted publishing
+      # required for create release
       contents: write
 
     steps:

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "contextproxy"
-version = "0.1.0-dev"
+version = "0.1.0.dev"
 description = "A Flask plugin providing context-based lazy-loaded proxy objects."
 authors = [
     { name = "Quan Guo", email = "1118270+guoquan@users.noreply.github.com" }
