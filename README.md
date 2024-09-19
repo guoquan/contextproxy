@@ -1,12 +1,13 @@
 # Flask Context Proxy
 
-`contextproxy` is a `@contextmanager` style utility designed to simplify the management of lazily loaded, context-based resources in `Flask` applications. It allows resources to be automatically initialized and cleaned up based on Flask's request and application lifecycle, and can be used to share resources across multiple requests or manage them on a per-request basis.
+`contextproxy` is a `@contextmanager` style `LocalProxy`, managed by `flask.g`, designed to simplify the management of lazily loaded, context-based resources in `Flask` applications. It allows resources to be easily accessed, automatically initialized and cleaned up based on `Flask`'s request and application lifecycle, and can be used to share resources across multiple requests or manage them on a per-request basis.
 
 ## Features
 
+- **Easy Access**: Resources can be accessed using decorated names, making them easy to use in your application.
 - **Lazy Initialization**: Resources are only initialized when accessed, saving computation and memory for unused resources.
 - **Automatic Teardown**: Resources are cleaned up automatically after the application context is torn down.
-- **Supports Flask Contexts**: The decorator works seamlessly with Flask's request and application contexts, ensuring context isolation and cleanup.
+- **Supports `Flask` Contexts**: The decorator works seamlessly with `Flask`'s request and application contexts, ensuring context isolation and cleanup.
 - **Thread Safety**: Ensures that resources are unique per thread in multi-threaded environments.
 
 ## Installation
