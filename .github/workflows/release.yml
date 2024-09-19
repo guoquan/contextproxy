@@ -64,6 +64,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
+          prerelease: ${{ contains(github.ref, 'rc') || contains(github.ref, 'beta') || contains(github.ref, 'alpha') || contains(github.ref, 'dev') || contains(github.ref, 'test') || contains(github.ref, 'preview') || contains(github.ref, 'nightly') || contains(github.ref, 'unstable') || contains(github.ref, 'experimental') || contains(github.ref, 'wip') || contains(github.ref, 'draft') }}
+          generate_release_notes: true
           body: ${{ steps.build_changelog.outputs.changelog }}
           files: dist/*
 
