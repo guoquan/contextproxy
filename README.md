@@ -2,6 +2,10 @@
 
 `contextproxy` is a `@contextmanager` style `LocalProxy`, managed by `flask.g`, designed to simplify the management of lazily loaded, context-based resources in `Flask` applications. It allows resources to be easily accessed, automatically initialized and cleaned up based on `Flask`'s request and application lifecycle, and can be used to share resources across multiple requests or manage them on a per-request basis.
 
+[![Release](https://github.com/guoquan/contextproxy/actions/workflows/release.yml/badge.svg)](https://github.com/guoquan/contextproxy/actions/workflows/release.yml)
+[![PyPI - Version](https://img.shields.io/pypi/v/contextproxy)](https://pypi.org/project/contextproxy/)
+[![GitHub License](https://img.shields.io/github/license/guoquan/contextproxy)](LICENSE)
+
 ## Features
 
 - **Easy Access**: Resources can be accessed using decorated names, making them easy to use in your application.
